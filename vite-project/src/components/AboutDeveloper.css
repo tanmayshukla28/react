@@ -1,0 +1,39 @@
+.about-developer {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-developer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.about-developer p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* 🔹 Black LinkedIn button */
+.about-developer a {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background-color: #000; /* black button */
+  color: #fff; /* white text */
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.about-developer a:hover {
+  background-color: #333; /* lighter black on hover */
+  transform: scale(1.05);
+}

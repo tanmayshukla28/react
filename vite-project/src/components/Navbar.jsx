@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ user }) {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
 
@@ -10,44 +11,25 @@ function Navbar() {
     console.log(`${menu} clicked`);
   };
 
-  // Disable scrolling when dropdown is open
   useEffect(() => {
-    if (openDropdown) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = openDropdown ? "hidden" : "auto";
     return () => {
-      document.body.style.overflow = "auto"; // cleanup
+      document.body.style.overflow = "auto";
     };
   }, [openDropdown]);
 
-  // Toggle dark mode
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
+    document.body.classList.toggle("dark-mode", darkMode);
   }, [darkMode]);
 
   return (
     <>
       <nav className="navbar">
+        {/* Left: Logo */}
         <div className="logo">CareerAdvisor</div>
 
+        {/* Middle: Nav buttons */}
         <ul className="nav-links">
-          {/* Dark mode toggle button on left */}
-          <li>
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="dark-toggle-btn"
-            >
-              {darkMode ? "☀️" : "🌙"}
-            </button>
-          </li>
-
-          {/* Rest of navbar items on right */}
           <li>
             <a
               href="#subjects"
@@ -87,9 +69,35 @@ function Navbar() {
             </a>
           </li>
         </ul>
+
+        {/* Right: Dark mode + Auth buttons */}
+        <div className="nav-actions">
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="dark-toggle-btn"
+          >
+            {darkMode ? "☀️" : "🌙"}
+          </button>
+
+          {user ? (
+            <button
+              onClick={() => {
+                localStorage.clear();
+                window.location.href = "/";
+              }}
+              className="logout-btn"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="login-btn">Login / Signup</button>
+            </Link>
+          )}
+        </div>
       </nav>
 
-      {/* Overlay Blur */}
+      {/* Overlay */}
       {openDropdown && (
         <div className="overlay" onClick={() => setOpenDropdown(null)}></div>
       )}
@@ -97,7 +105,7 @@ function Navbar() {
       {/* Dropdown Panel */}
       {openDropdown && (
         <div className="dropdown-panel">
-          {openDropdown === "subjects" || openDropdown === "careers" ? (
+          {["subjects", "careers"].includes(openDropdown) ? (
             <>
               <h2>Choose your domain</h2>
               <div className="dropdown-buttons">

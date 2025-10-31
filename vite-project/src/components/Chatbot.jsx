@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Chatbot.css";
 
 function Chatbot() {
@@ -8,27 +9,38 @@ function Chatbot() {
   ]);
   const [input, setInput] = useState("");
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!input.trim()) return;
-    setMessages([...messages, { from: "user", text: input }]);
+
+    const userMessage = input.trim();
+    setMessages([...messages, { from: "user", text: userMessage }]);
     setInput("");
-    // Temporary bot reply (you can later connect to AI backend)
-    setTimeout(() => {
+
+    try {
+      const res = await axios.post("http://localhost:5000/api/chat", {
+        message: userMessage,
+      });
+      const botReply = res.data.reply;
+      setMessages((prev) => [...prev, { from: "bot", text: botReply }]);
+    } catch (err) {
       setMessages((prev) => [
         ...prev,
-        { from: "bot", text: "Thanks for your question, we'll get back to you!" },
+        { from: "bot", text: "Sorry, I couldn't respond right now." },
       ]);
-    }, 800);
+    }
   };
+
+  useEffect(() => {
+    const box = document.querySelector(".chatbot-messages");
+    if (box) box.scrollTop = box.scrollHeight;
+  }, [messages]);
 
   return (
     <div className="chatbot-container">
-      {/* Floating toggle button */}
       <button className="chatbot-toggle" onClick={() => setOpen(!open)}>
         💬
       </button>
 
-      {/* Chatbox */}
       {open && (
         <div className="chatbot-box">
           <div className="chatbot-messages">

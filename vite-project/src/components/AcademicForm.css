@@ -1,0 +1,43 @@
+.form-container {
+  width: 400px;
+  margin: 80px auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.academic-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.academic-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.academic-form input,
+.academic-form select,
+.academic-form textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.academic-form button {
+  padding: 0.75rem;
+  background: #6e798d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.academic-form button:hover {
+  background: #2563eb;
+}
