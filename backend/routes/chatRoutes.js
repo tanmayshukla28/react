@@ -2,6 +2,8 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
+const groqApiKey = process.env.GROQ_API_KEY;
+
 router.post('/', async (req, res) => {
   const { message } = req.body;
 
