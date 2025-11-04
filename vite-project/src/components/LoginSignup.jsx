@@ -56,7 +56,7 @@ function LoginSignup() {
       </div>
 
       <div className="login-box">
-        <h2>Login / Signup</h2>
+        <h2>Login</h2>
         <form onSubmit={handleLogin}>
           <input
             type="email"

@@ -1,0 +1,78 @@
+.stream-page {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9fc;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.stream-page h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.stream-page section {
+  margin-bottom: 2.5rem;
+}
+
+.stream-page h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: #34495e;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+.stream-page ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.stream-page ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.stream-page ul li::before {
+  content: "📘";
+  position: absolute;
+  left: 0;
+}
+
+.stream-page p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.stream-page a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.stream-page a:hover {
+  text-decoration: underline;
+}
+
+.chart-img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.tip-box {
+  background-color: #eef6ff;
+  border-left: 4px solid #3498db;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}

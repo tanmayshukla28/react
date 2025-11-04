@@ -1,27 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Features.css";
 
 function Features() {
   const features = [
     {
       title: "Subject Guidance",
-      desc: "Choose the best subject combinations after Class 12 based on your interests and goals.",
-      link: "#subjects"
+      desc: "Take a quiz, compare subjects, and explore stream trends to find your ideal academic path.",
+      route: "/subject-guidance"
     },
     {
       title: "College Finder",
       desc: "Explore and compare government colleges near you with course details, fees, and admissions info.",
-      link: "#colleges"
+      route: "/colleges"
     },
     {
       title: "Career Insights",
       desc: "Understand long-term outcomes – courses, jobs, skills, and entrance exams required.",
-      link: "#careers"
+      route: "/career-insights" // ✅ Fixed route
     },
     {
       title: "Free Resources",
       desc: "Get open-source e-books, skill-building materials, and scholarships to support your journey.",
-      link: "#resources"
+      route: "/resources" // ✅ Optional: create this route later
     },
   ];
 
@@ -33,13 +34,13 @@ function Features() {
     <section className="features">
       {features.map((feature, idx) => (
         <div key={idx} className="feature-card">
-          <a
-            href={feature.link}
+          <Link
+            to={feature.route}
             className="feature-btn"
             onClick={() => handleClick(feature.title)}
           >
             {feature.title}
-          </a>
+          </Link>
           <p>{feature.desc}</p>
         </div>
       ))}

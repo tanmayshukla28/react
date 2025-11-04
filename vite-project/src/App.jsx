@@ -8,6 +8,16 @@ import Chatbot from "./components/Chatbot";
 import LoginSignup from "./components/LoginSignup";
 import AcademicForm from "./components/AcademicForm";
 import AboutDeveloper from "./components/AboutDeveloper";
+import CollegeFinder from "./components/CollegeFinder";
+
+// ✅ Stream pages
+import Science from "./components/SubjectStream/Science";
+import Commerce from "./components/SubjectStream/Commerce";
+import Humanities from "./components/SubjectStream/Humanities";
+
+// ✅ Feature pages
+import SubjectGuidance from "./components/SubjectGuidance/SubjectGuidance";
+import CareerInsights from "./components/CareerInsights/CareerInsights"; // ✅ Added
 
 import "./App.css";
 
@@ -59,6 +69,16 @@ function AppWrapper() {
         <Route path="/login" element={<LoginSignup />} />
         <Route path="/form" element={<AcademicForm />} />
         <Route path="/about" element={<AboutDeveloper />} />
+        <Route path="/colleges" element={<CollegeFinder />} />
+
+        {/* ✅ Subject stream routes */}
+        <Route path="/subjects/science" element={<Science />} />
+        <Route path="/subjects/commerce" element={<Commerce />} />
+        <Route path="/subjects/humanities" element={<Humanities />} />
+
+        {/* ✅ Feature routes */}
+        <Route path="/subject-guidance" element={<SubjectGuidance />} />
+        <Route path="/career-insights" element={<CareerInsights />} /> {/* ✅ Added */}
       </Routes>
     </div>
   );

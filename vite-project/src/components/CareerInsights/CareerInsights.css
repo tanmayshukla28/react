@@ -1,0 +1,183 @@
+/* Page container */
+.career-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+}
+
+/* Page heading */
+.career-page h2 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.career-page p {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+/* Section card */
+.section-box {
+  background: #ffffff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Section title */
+.section-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+  font-weight: 600;
+  border-left: 6px solid #3498db;
+  padding-left: 1rem;
+}
+
+/* Stream headers */
+.section-box h4 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.section-box h4::before {
+  content: "📘";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* List styling */
+.section-box ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.section-box li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  background: #f4f6f8;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.04);
+  transition: background 0.2s ease;
+}
+
+.section-box li:hover {
+  background: #eaf2ff;
+}
+
+/* Career card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.career-card {
+  background: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-4px);
+}
+
+.career-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.career-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Skill badges */
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.skill-badge {
+  background: #3498db;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: background 0.2s ease;
+}
+
+.skill-badge:hover {
+  background: #2980b9;
+}
+
+/* Chart dropdown */
+.section-box select {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+}
+
+/* Chart canvas */
+.section-box canvas {
+  max-height: 260px;
+  margin: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .career-page {
+    padding: 1rem;
+  }
+
+  .section-box {
+    padding: 1.2rem;
+  }
+
+  .section-box h3 {
+    font-size: 1.5rem;
+  }
+
+  .section-box h4 {
+    font-size: 1.1rem;
+  }
+
+  .section-box li {
+    font-size: 0.95rem;
+  }
+
+  .skill-badge {
+    font-size: 0.85rem;
+  }
+}

@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar({ user }) {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
+  const navigate = useNavigate();
 
   const handleClick = (menu) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
     console.log(`${menu} clicked`);
+  };
+
+  const handleStreamSelect = (stream) => {
+    setOpenDropdown(null);
+    navigate(`/subjects/${stream.toLowerCase()}`);
   };
 
   useEffect(() => {
@@ -26,7 +32,9 @@ function Navbar({ user }) {
     <>
       <nav className="navbar">
         {/* Left: Logo */}
-        <div className="logo">CareerAdvisor</div>
+        <div className="logo">
+          <Link to="/">CareerAdvisor</Link>
+        </div>
 
         {/* Middle: Nav buttons */}
         <ul className="nav-links">
@@ -42,9 +50,7 @@ function Navbar({ user }) {
             </a>
           </li>
           <li>
-            <a href="#colleges" onClick={() => console.log("Colleges clicked")}>
-              Colleges
-            </a>
+            <Link to="/colleges">Colleges</Link>
           </li>
           <li>
             <a
@@ -109,13 +115,13 @@ function Navbar({ user }) {
             <>
               <h2>Choose your domain</h2>
               <div className="dropdown-buttons">
-                <button onClick={() => console.log("Science clicked")}>
+                <button onClick={() => handleStreamSelect("Science")}>
                   Science
                 </button>
-                <button onClick={() => console.log("Commerce clicked")}>
+                <button onClick={() => handleStreamSelect("Commerce")}>
                   Commerce
                 </button>
-                <button onClick={() => console.log("Humanities clicked")}>
+                <button onClick={() => handleStreamSelect("Humanities")}>
                   Humanities
                 </button>
               </div>

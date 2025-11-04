@@ -1,0 +1,152 @@
+/* Page container */
+.guidance-page {
+  max-width: 1080px;
+  margin: auto;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fdfdfd;
+}
+
+/* Page header */
+.guidance-page h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.guidance-page p {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* Section cards */
+.quiz-box, .compare-box, .trends-box {
+  background: #ffffff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.quiz-box:hover, .compare-box:hover, .trends-box:hover {
+  transform: translateY(-4px);
+}
+
+/* Quiz styling */
+.quiz-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+.quiz-box label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.quiz-box input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.quiz-box button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quiz-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Quiz result */
+.result-box {
+  margin-top: 1.5rem;
+  background: #eef6ff;
+  padding: 1rem;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+}
+
+/* Comparison tool */
+.compare-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+.compare-box select {
+  margin-right: 1rem;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+.compare-box table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+.compare-box th, .compare-box td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.compare-box th {
+  background-color: #f0f4f8;
+  color: #2c3e50;
+}
+
+/* Chart section */
+.trends-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+.trends-box section {
+  margin-bottom: 2rem;
+}
+
+.trends-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.trend-img {
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .guidance-page {
+    padding: 1rem;
+  }
+
+  .compare-box select {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .compare-box table, .compare-box th, .compare-box td {
+    font-size: 0.85rem;
+  }
+}

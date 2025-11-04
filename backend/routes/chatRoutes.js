@@ -2,8 +2,6 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
-const groqApiKey = process.env.GROQ_API_KEY;
-
 router.post('/', async (req, res) => {
   const { message } = req.body;
 
@@ -21,7 +19,7 @@ router.post('/', async (req, res) => {
       },
       {
         headers: {
-          Authorization: 'Bearer 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',
+          Authorization: 'Bearer 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',
           'Content-Type': 'application/json',
         },
       }

@@ -1,0 +1,87 @@
+/* Container */
+.college-finder {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Heading */
+.college-finder h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Search Bar */
+.college-finder input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.filters select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+/* College List */
+.college-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* College Card */
+.college-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.college-card:hover {
+  transform: translateY(-4px);
+}
+
+/* College Info */
+.college-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.college-card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Website Link */
+.college-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.college-card a:hover {
+  text-decoration: underline;
+}
