@@ -17,7 +17,13 @@ import Humanities from "./components/SubjectStream/Humanities";
 
 // ✅ Feature pages
 import SubjectGuidance from "./components/SubjectGuidance/SubjectGuidance";
-import CareerInsights from "./components/CareerInsights/CareerInsights"; // ✅ Added
+import CareerInsights from "./components/CareerInsights/CareerInsights";
+
+// ✅ Resources pages
+import Resources from "./components/Resources/Resources";
+import Ebooks from "./components/Resources/Ebooks";
+import Materials from "./components/Resources/Materials";
+import Scholarships from "./components/Resources/Scholarships";
 
 import "./App.css";
 
@@ -78,7 +84,13 @@ function AppWrapper() {
 
         {/* ✅ Feature routes */}
         <Route path="/subject-guidance" element={<SubjectGuidance />} />
-        <Route path="/career-insights" element={<CareerInsights />} /> {/* ✅ Added */}
+        <Route path="/career-insights" element={<CareerInsights />} />
+
+        {/* ✅ Resources routes */}
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/resources/ebooks" element={<Ebooks />} />
+        <Route path="/resources/materials" element={<Materials />} />
+        <Route path="/resources/scholarships" element={<Scholarships />} />
       </Routes>
     </div>
   );

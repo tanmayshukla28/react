@@ -17,6 +17,11 @@ function Navbar({ user }) {
     navigate(`/subjects/${stream.toLowerCase()}`);
   };
 
+  const handleResourceSelect = (path) => {
+    setOpenDropdown(null);
+    navigate(`/resources/${path}`);
+  };
+
   useEffect(() => {
     document.body.style.overflow = openDropdown ? "hidden" : "auto";
     return () => {
@@ -130,13 +135,13 @@ function Navbar({ user }) {
             <>
               <h2>Resources</h2>
               <div className="dropdown-buttons">
-                <button onClick={() => console.log("E-books clicked")}>
+                <button onClick={() => handleResourceSelect("ebooks")}>
                   E-books
                 </button>
-                <button onClick={() => console.log("Materials clicked")}>
+                <button onClick={() => handleResourceSelect("materials")}>
                   Materials
                 </button>
-                <button onClick={() => console.log("Scholarships clicked")}>
+                <button onClick={() => handleResourceSelect("scholarships")}>
                   Scholarships
                 </button>
               </div>

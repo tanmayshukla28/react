@@ -1,0 +1,125 @@
+.resource-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 3rem 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+}
+
+.resource-section h2 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.resource-section p {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+.resource-grid,
+.scholarship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.resource-card,
+.scholarship-card {
+  background: #ffffff;
+  padding: 2rem;
+  min-height: 300px;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem; /* evenly spaced items */
+}
+
+.resource-card:hover,
+.scholarship-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.resource-card h4,
+.scholarship-card h4 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.resource-card p,
+.scholarship-card p {
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.explore-btn,
+.download-btn,
+.apply-btn {
+  padding: 0.6rem 1.2rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  align-self: center;
+}
+
+.explore-btn:hover,
+.download-btn:hover,
+.apply-btn:hover {
+  background: #2980b9;
+}
+
+.tab-row,
+.filter-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn,
+.filter-row select {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #3498db;
+  color: white;
+}
+
+.badge-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.badge {
+  background: #3498db;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
